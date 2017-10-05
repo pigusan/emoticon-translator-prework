@@ -7,8 +7,10 @@ emoticons.each do |name, emoticon|
   puts emoticon
 end
 
-def load_library
-  # code goes here
+def load_library(file_path)
+  require 'yaml'
+  emoticons = YAML.load_file(file_path)
+  emoticons
 end
 
 def get_japanese_emoticon
