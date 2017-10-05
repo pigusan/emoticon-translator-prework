@@ -11,10 +11,10 @@ def load_library(file_path)
   emoticons.each do |label, emoticon|
     american_emoticon = emoticon[0]
     japanese_emoticon = emoticon[1]
-    if new_hash.key?(:get_meaning) == false
-      new_hash[:get_meaning]= {}
+    if new_hash.key?('get_meaning') == false
+      new_hash['get_meaning']= {}
       new_hash[:get_emoticon] = {}
-      new_hash[:get_meaning] = new_hash[:get_meaning].merge("#{japanese_emoticon}": label)
+      new_hash['get_meaning'] = new_hash['get_meaning'].merge("#{japanese_emoticon}": label)
       new_hash[:get_emoticon] = new_hash[:get_emoticon].merge("#{american_emoticon}": japanese_emoticon)
     else
       new_hash[:get_meaning][japanese_emoticon] = label
