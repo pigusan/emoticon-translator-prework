@@ -1,6 +1,6 @@
 require 'yaml'
 emoticons = YAML.load_file('./lib/emoticons.yml')
-puts emoticons.inspect
+#puts emoticons.inspect
 
 
 
@@ -16,9 +16,9 @@ def load_library(file_path)
       new_hash[:get_emoticon] = {}
       new_hash[:get_meaning] = new_hash[:get_meaning].merge("#{japanese_emoticon}": label)
       new_hash[:get_emoticon] = new_hash[:get_emoticon].merge("#{american_emoticon}": japanese_emoticon)
-    else 
+    else
       new_hash[:get_meaning][japanese_emoticon] = label
-      new_hash[:get_meaning][american_emoticon] = japanese_emoticon 
+      new_hash[:get_meaning][american_emoticon] = japanese_emoticon
     end
   end
   new_hash
@@ -31,5 +31,3 @@ end
 def get_english_meaning(file_path, emoticon)
   # code goes here
 end
-
-{get_meaning => {"☜(⌒▽⌒)☞" => "angel", }, get_emoticon => {"O:)" => "☜(⌒▽⌒)☞"}}
