@@ -29,7 +29,7 @@ def get_japanese_emoticon(file_path, emoticon)
   if emoticon_hash['get_emoticon'][emoticon]
     emoticon_hash['get_emoticon'][emoticon]
   else
-    puts "Sorry, that emoticon was not found"
+    "Sorry, that emoticon was not found"
   end
 end
 
@@ -38,6 +38,6 @@ def get_english_meaning(file_path, emoticon)
   if emoticon_hash['get_meaning'][emoticon]
     emoticon_hash['get_emoticon'][emoticon]
   else
-    puts "Sorry, that emoticon was not found"
+    "Sorry, that emoticon was not found"
   end
 end
